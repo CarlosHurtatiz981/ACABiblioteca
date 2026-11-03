@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.Data.SqlClient;
+
+namespace ACABiblioteca.Datos
+{
+    public class Conexion
+    {
+
+        private static string cadenaConexion = "Server=localhost;Database=AcaBiblioteca;Integrated Security=True;TrustServerCertificate=True;";
+
+        public SqlConnection ObtenerConexion()
+        {
+            return new SqlConnection(cadenaConexion);
+        }
+
+       
+    }
+
+}
+        
+
