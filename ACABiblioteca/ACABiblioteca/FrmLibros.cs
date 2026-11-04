@@ -14,5 +14,10 @@ namespace ACABiblioteca
         {
             InitializeComponent();
         }
+
+        private void pnlDatos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -73,6 +73,7 @@
             // btnSalir
             // 
             btnSalir.AutoSize = true;
+            btnSalir.Cursor = Cursors.Hand;
             btnSalir.Dock = DockStyle.Top;
             btnSalir.FlatAppearance.BorderSize = 0;
             btnSalir.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -94,6 +95,7 @@
             // btnReportes
             // 
             btnReportes.AutoSize = true;
+            btnReportes.Cursor = Cursors.Hand;
             btnReportes.Dock = DockStyle.Top;
             btnReportes.FlatAppearance.BorderSize = 0;
             btnReportes.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -115,6 +117,7 @@
             // btnPrestamos
             // 
             btnPrestamos.AutoSize = true;
+            btnPrestamos.Cursor = Cursors.Hand;
             btnPrestamos.Dock = DockStyle.Top;
             btnPrestamos.FlatAppearance.BorderSize = 0;
             btnPrestamos.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -136,6 +139,7 @@
             // btnEditoriales
             // 
             btnEditoriales.AutoSize = true;
+            btnEditoriales.Cursor = Cursors.Hand;
             btnEditoriales.Dock = DockStyle.Top;
             btnEditoriales.FlatAppearance.BorderSize = 0;
             btnEditoriales.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -157,6 +161,7 @@
             // btnAutores
             // 
             btnAutores.AutoSize = true;
+            btnAutores.Cursor = Cursors.Hand;
             btnAutores.Dock = DockStyle.Top;
             btnAutores.FlatAppearance.BorderSize = 0;
             btnAutores.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -178,6 +183,7 @@
             // btnUsuarios
             // 
             btnUsuarios.AutoSize = true;
+            btnUsuarios.Cursor = Cursors.Hand;
             btnUsuarios.Dock = DockStyle.Top;
             btnUsuarios.FlatAppearance.BorderSize = 0;
             btnUsuarios.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -199,6 +205,7 @@
             // btnLibros
             // 
             btnLibros.AutoSize = true;
+            btnLibros.Cursor = Cursors.Hand;
             btnLibros.Dock = DockStyle.Top;
             btnLibros.FlatAppearance.BorderSize = 0;
             btnLibros.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -220,6 +227,7 @@
             // btnInicio
             // 
             btnInicio.AutoSize = true;
+            btnInicio.Cursor = Cursors.Hand;
             btnInicio.Dock = DockStyle.Top;
             btnInicio.FlatAppearance.BorderSize = 0;
             btnInicio.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);

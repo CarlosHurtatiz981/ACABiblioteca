@@ -5,6 +5,27 @@ namespace ACABiblioteca
         public FrmPrincipal()
         {
             InitializeComponent();
+            Conexion conexion = new Conexion();
+            try
+            { 
+                    using (var conn = conexion.ObtenerConexion())
+            {
+                    conn.Open();
+                    // La conexión se ha establecido correctamente
+                    MessageBox.Show("Conexion a la base de datos establecida correctamente. ",
+                        "AcaBiblioteca",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar a la base de datos: " + ex.Message,
+                    "AcaBiblioteca",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+
             AbrirFormulario(new FrmInicio());
         }
 
