@@ -8,7 +8,7 @@ namespace ACABiblioteca.Datos
     public class Conexion
     {
 
-        private static string cadenaConexion = "Server=localhost;Database=AcaBiblioteca;Integrated Security=True;TrustServerCertificate=True;";
+        private string cadenaConexion = "Server=localhost;Database=AcaBiblioteca;Integrated Security=True;TrustServerCertificate=True;";
 
         public SqlConnection ObtenerConexion()
         {
