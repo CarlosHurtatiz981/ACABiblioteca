@@ -894,45 +894,163 @@ funcionalidades.
 
 ## 11.2 Gestión de libros
 
-![Gestión de libros](ruta/captura-libros.png)
+![alt text](<Buscar libro-1.png>)
 
-**Descripción:** \[Explicar la funcionalidad.\]
+**Descripción:** Esta pantalla permite administrar la información de los libros registrados en la biblioteca. Ofrece las opciones de registrar nuevos libros, consultar, buscar, modificar y eliminar registros. También permite visualizar información como ISBN, título, categoría, año de publicación, autor, editorial y existencias disponibles.
 
 ## 11.3 Gestión de autores
 
-![Gestión de autores](ruta/captura-autores.png)
+![alt text](<Gestion Autores.png>)
+
+**Descripción:** Permite administrar la información de los autores asociados a los libros de la biblioteca. Desde este módulo se pueden registrar nuevos autores, consultar los existentes, modificar sus datos y eliminar registros cuando no tengan libros asociados. Además, evita la duplicidad de autores mediante la validación del nombre y apellido.
+
 
 **Descripción:** \[Explicar la funcionalidad.\]
 
-## 11.4 Gestión de categorías
+## 11.4 Gestión de usuarios
 
-![Gestión de categorías](ruta/captura-categorias.png)
+![alt text](<Gestion usuarios.png>)
 
-**Descripción:** \[Explicar la funcionalidad.\]
+**Descripción:** Permite administrar la información de los usuarios registrados en el sistema, quienes pueden solicitar préstamos de libros. Incluye las opciones de registro, consulta, modificación y eliminación de usuarios, validando que el documento de identidad sea obligatorio, numérico y único. También verifica el formato del correo electrónico cuando se proporciona.
 
-## 11.5 Gestión de usuarios
+## 11.5 Registro de préstamos
 
-![Gestión de usuarios](ruta/captura-usuarios.png)
+![alt text](<Gestion Prestamos.png>)
 
-**Descripción:** \[Explicar la funcionalidad.\]
+**Descripción:** Esta pantalla permite registrar los préstamos de libros realizados por los usuarios de la biblioteca. Para ello, se selecciona el usuario, el libro y la fecha correspondiente. El sistema verifica la disponibilidad de ejemplares y permite consultar los préstamos registrados, filtrarlos por estado y modificar o eliminar préstamos que continúen activos.
 
-## 11.6 Registro de préstamos
+## 11.6 Registro de devoluciones
 
-![Registro de préstamos](ruta/captura-prestamos.png)
+![alt text](<Gestion Prestamos-1.png>)
 
-**Descripción:** \[Explicar la funcionalidad.\]
+**Descripción:** Es el mismo modulo de Prestamos Este módulo permite registrar la devolución de los libros que se encuentran en préstamo. El usuario selecciona el préstamo correspondiente, establece la fecha de devolución y confirma la operación. Una vez registrada, el sistema actualiza el estado del préstamo a "Devuelto" y aumenta la cantidad de ejemplares disponibles del libro.
 
-## 11.7 Registro de devoluciones
+## 11.7 Consultas
 
-![Registro de devoluciones](ruta/captura-devoluciones.png)
+![alt text](<Gestion Consultas.png>)
 
-**Descripción:** \[Explicar la funcionalidad.\]
+**Descripción:** Esta sección permite consultar información general y específica de la biblioteca mediante diferentes reportes. Incluye listados de libros, autores, editoriales y usuarios, historial de préstamos, préstamos activos y devueltos, libros más prestados, libros sin existencias e información consolidada. Cada consulta presenta el total de registros obtenidos, facilitando el seguimiento y la gestión de la información.
 
-## 11.8 Consultas
+------------------------------------------------------------------------
 
-![Consultas](ruta/captura-consultas.png)
+# 12. PRUEBAS DE FUNCIONAMIENTO
 
-**Descripción:** \[Explicar la funcionalidad.\]
+## 12.1 Estrategia de pruebas
 
-> **Recomendación:** cada captura debe tener una breve explicación y
-> mostrar una funcionalidad real del sistema.
+Describir cómo se verificó el funcionamiento del sistema.
+
+## 12.2 Casos de prueba
+
+  ------------------------------------------------------------------------------------------
+  ID          Funcionalidad   Entrada / Acción Resultado        Resultado       Estado
+                                               esperado         obtenido        
+  ----------- --------------- ---------------- ---------------- --------------- ------------
+  CP01        Registrar libro Datos válidos    Libro registrado El libro se registró correctamente y apareció en el listado de libros.   Aprobado
+                                               correctamente                    
+
+  CP02        Registrar libro Código repetido  Mostrar mensaje  El sistema identificó el ISBN duplicado y mostró un mensaje de validación, impidiendo guardar el registro.   Aprobado
+                                               de validación                    
+
+  CP03        Registrar       Datos válidos    Usuario          El usuario se registró correctamente y su información quedó almacenada en la base de datos.   Aprobado
+              usuario                          registrado                       
+
+  CP04        Registrar       Libro disponible Préstamo         El préstamo se registró correctamente y la cantidad de ejemplares disponibles disminuyó.   Aprobado
+              préstamo                         registrado y                     
+                                               disponibilidad                   
+                                               actualizada                      
+
+  CP05        Registrar       Libro sin        No permitir el   El sistema impidió registrar el préstamo porque no había ejemplares disponibles del libro seleccionado.   Aprobado
+              préstamo        disponibilidad   préstamo                         
+
+  CP06        Registrar       Préstamo activo  Registrar        La devolución se registró correctamente, el préstamo cambió al estado «Devuelto» y aumentó la disponibilidad del libro.   Aprobado
+              devolución                       devolución y                     
+                                               actualizar                       
+                                               disponibilidad                   
+
+  CP07        Devolución con  Fecha posterior  Calcular retraso El sistema identificó el retraso en la devolución y calculó la multa correspondiente.   Aprobado
+              retraso         a la estimada    y multa                          
+
+  CP08        Consulta        Consultar libros Mostrar libros   El sistema mostró correctamente el listado de libros disponibles para consulta.   Aprobado
+                              disponibles      disponibles                      
+
+  CP09        \[Otra prueba\] \[Entrada\]      \[Resultado      \[Resultado\]   \[Estado\]
+                                               esperado\]                       
+  ------------------------------------------------------------------------------------------
+
+## 12.3 Evidencias de pruebas
+
+
+### Prueba CP01
+
+![alt text](<Registro libros-1.png>)
+
+**Resultado:** Se evidencia el registro exitoso de un nuevo libro en el sistema. La información ingresada fue almacenada correctamente en la base de datos y se encuentra disponible en el listado general de libros.
+
+### Prueba CP02
+
+![alt text](<Libro repetido.png>)
+
+**Resultado:** Se evidencia que el sistema identifica un ISBN que ya se encuentra registrado en la base de datos. Al intentar ingresar nuevamente el mismo código, muestra un mensaje de validación e impide la duplicación del registro.
+
+------------------------------------------------------------------------
+
+# 13. CONCLUSIONES
+
+## Conclusión 1
+
+Con el desarrollo del proyecto ACABiblioteca se logró construir una aplicación de escritorio orientada a la gestión y administración de los procesos básicos de una biblioteca. El sistema permite registrar, consultar, modificar y eliminar información de libros, autores, categorías, editoriales y usuarios, además de gestionar préstamos, devoluciones y generar reportes. Esto permite organizar la información bibliográfica, facilitar las consultas y mejorar el seguimiento de los recursos disponibles.
+
+## Conclusión 2
+
+Durante el desarrollo del proyecto se aplicaron conceptos fundamentales de la Programación Orientada a Objetos mediante el lenguaje C#, utilizando clases, métodos, atributos, encapsulamiento y organización del código. También se implementaron formularios de Windows Forms para facilitar la interacción con el usuario, permitiendo desarrollar una aplicación estructurada, funcional y de fácil manejo.
+
+## Conclusión 3
+
+La implementación de SQL Server como sistema gestor de base de datos permitió almacenar y administrar de manera organizada la información de la biblioteca. Mediante ADO.NET y Microsoft.Data.SqlClient se estableció la comunicación entre la aplicación y la base de datos, utilizando consultas SQL parametrizadas para realizar las operaciones de registro, actualización, eliminación y consulta. Asimismo, la organización por capas permitió separar las responsabilidades del sistema, facilitando su mantenimiento, comprensión y futuras modificaciones.
+
+## Conclusión 4
+
+Durante el desarrollo del proyecto se presentaron dificultades relacionadas con la conexión a la base de datos, la programación de eventos en Windows Forms, la validación de información y la integración de los diferentes módulos. Estas situaciones se solucionaron mediante la revisión del código, la identificación de errores, la realización de pruebas y los ajustes necesarios en los formularios y consultas SQL. Este proceso permitió fortalecer las habilidades de programación, análisis y solución de problemas, así como comprender la importancia de realizar pruebas durante el desarrollo de software.
+
+------------------------------------------------------------------------
+
+# 15. REFERENCIAS BIBLIOGRÁFICAS
+
+> Utilizar **Normas APA, última edición**.
+
+Ejemplos de formato:
+
+**Página web:**
+
+icrosoft. (s. f.). Microsoft.Data.SqlClient para SQL Server. Microsoft Learn. https://learn.microsoft.com/es-es/sql/connect/ado-net/
+
+------------------------------------------------------------------------
+
+# ANEXOS
+
+## Anexo A. Repositorio GitHub
+
+**Repositorio:** \[Enlace al repositorio\]
+
+## Anexo B. Script de base de datos
+
+**Archivo:** `Script BD.sql`
+
+## Anexo C. Evidencia de Git y GitHub
+
+Insertar capturas que evidencien:
+
+-   Creación del repositorio.
+
+![alt text](<Repositorio local Git Hub.png>)
+![alt text](<Repositorio WEB Git Hub.png>)
+
+-   Commits realizados.**887**
+![alt text](<Commits realizados.png>)
+![alt text](<Commit Git Hub.png>)
+
+
+## Anexo D. Otras evidencias
+
+\[Agregar cualquier evidencia adicional relevante.\]
+
