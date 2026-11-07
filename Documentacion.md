@@ -1016,13 +1016,10 @@ Durante el desarrollo del proyecto se presentaron dificultades relacionadas con 
 
 # 15. REFERENCIAS BIBLIOGRÁFICAS
 
-> Utilizar **Normas APA, última edición**.
-
-Ejemplos de formato:
 
 **Página web:**
 
-icrosoft. (s. f.). Microsoft.Data.SqlClient para SQL Server. Microsoft Learn. https://learn.microsoft.com/es-es/sql/connect/ado-net/
+Microsoft. (s. f.). Microsoft.Data.SqlClient para SQL Server. Microsoft Learn. https://learn.microsoft.com/es-es/sql/connect/ado-net/
 
 ------------------------------------------------------------------------
 
@@ -1038,19 +1035,51 @@ icrosoft. (s. f.). Microsoft.Data.SqlClient para SQL Server. Microsoft Learn. ht
 
 ## Anexo C. Evidencia de Git y GitHub
 
-Insertar capturas que evidencien:
 
 -   Creación del repositorio.
 
+Git Hub local
+
 ![alt text](<Repositorio local Git Hub.png>)
+
+Git Hub WEB
+
 ![alt text](<Repositorio WEB Git Hub.png>)
 
 -   Commits realizados.**887**
+
 ![alt text](<Commits realizados.png>)
+
 ![alt text](<Commit Git Hub.png>)
 
+# LISTA DE VERIFICACIÓN ANTES DE ENTREGAR
 
-## Anexo D. Otras evidencias
+-   [X] Portada.
+-   [X] Contraportada.
+-   [X] Introducción.
+-   [X] Objetivos.
+-   [X] Tabla de contenido.
+-   [X] Numeración de páginas.
+-   [X] Planteamiento del problema.
+-   [X] Análisis de requerimientos.
+-   [X] Casos de uso.
+-   [X] Diagrama de casos de uso.
+-   [X] Diagrama de clases.
+-   [X] Modelo entidad-relación.
+-   [X] Diccionario de datos.
+-   [X] Arquitectura del sistema.
+-   [X] Explicación de cada módulo.
+-   [X] Capturas de pantalla.
+-   [X] Pruebas de funcionamiento.
+-   [X] Conclusiones.
+-   [X] Recomendaciones.
+-   [X] Referencias bibliográficas en formato APA.
+-   [X] Código fuente completo.
+-   [X] Script SQL.
+-   [X] Datos de prueba.
+-   [X] Repositorio GitHub.
+-   [X] Evidencia de commits.
 
-\[Agregar cualquier evidencia adicional relevante.\]
+------------------------------------------------------------------------
+
 
