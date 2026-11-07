@@ -6,22 +6,28 @@
 
 ## PORTADA
 
-**\[CORPORACION UNIFICADA NACIONAL DE EDUCACION SUPERIOR\]**
+**CORPORACION UNIFICADA NACIONAL DE EDUCACION SUPERIOR**
 
-**\[INGENIERIA DE SISTEMAS / PROGRAMACION AVANZADA\]**
+**INGENIERIA DE SISTEMAS / PROGRAMACION AVANZADA**
 
 ### ACA -- Programación Avanzada
 
 ### Sistema de Gestión de Biblioteca
 
 **Presentado por:**\
-\[Carlos Erwin Hurtatiz Gomez\]
+
+ANDRES FELIPE TEJADA CARABALLO - 54465
+
+SEBASTIAN CIFUENTES SILVA
+
+CARLOS ERWIN HURTATIZ GOMEZ - 54463
 
 **Docente:**\
-\[Veronica Castro\]
+
+**VERONICA CASTRO**
 
 **Fecha:**\
-\[Bogota, 30, Octubre  2026\]
+Bogota, 30, Octubre  2026
 
 ------------------------------------------------------------------------
 
@@ -34,19 +40,26 @@ Avanzada**, aplicando Programación Orientada a Objetos, base de datos
 relacional, arquitectura por capas, operaciones CRUD, validaciones,
 manejo de excepciones y conexión con SQL Server.
 
-**Estudiante:** \[Carlos Erwin Hurtatiz Gomez\]\
-**Programa:** \[Ingenieria de Sistemas\]\
-**Grupo:** \[54463\]\
-**Docente:** \[Veronica Castro\]\
-**Institución:** \[CORPORACION UNIFICADA NACIONAL DE EDUCACION SUPERIOR\]\
-**Año:** \[2026\]
+**Estudiantes:** Andres Felipe Tejada Caraballo
+Sebastian Cifuentes Silva
+Carlos Erwin Hurtatiz Gomez
+
+
+**Programa:** Ingenieria de Sistemas
+
+**Grupo:** 54465 - 54463
+
+**Docente:** **Veronica Castro**
+
+**Institución:** CORPORACION UNIFICADA NACIONAL DE EDUCACION SUPERIOR
+
+**Año:** 2026
 
 ------------------------------------------------------------------------
 
 # TABLA DE CONTENIDO
 
-> **Nota:** Actualizar esta sección al finalizar el documento, de
-> acuerdo con la numeración real de las páginas.
+
 
 1.  Introducción
 2.  Objetivos
@@ -70,23 +83,19 @@ manejo de excepciones y conexión con SQL Server.
 
 # 1. INTRODUCCIÓN
 
-En este apartado se debe presentar de manera general el proyecto
-desarrollado.
+El presente documento describe el desarrollo del Sistema de Gestión de Biblioteca, una aplicación de escritorio
+cuyo propósito es facilitar la administración de los procesos de una biblioteca institucional: el registro de libros,
+autores, editoriales y usuarios, el control de los préstamos y las devoluciones, y la consulta de información
+mediante reportes.
 
-**Texto guía:**
+El sistema fue desarrollado con C#, .NET 10, Windows Forms y SQL Server, aplicando los principios de la
+Programación Orientada a Objetos y una arquitectura por capas (presentación, lógica de negocio, acceso a
+datos y base de datos). Las consultas a la base de datos son parametrizadas, las operaciones críticas se
+ejecutan dentro de transacciones y la información que ingresa el usuario se valida antes de almacenarse.
 
-El presente documento describe el desarrollo del **Sistema de Gestión de
-Biblioteca**, una aplicación de escritorio cuyo propósito es facilitar
-la administración de \[describir brevemente los procesos principales de
-la biblioteca\].
-
-El sistema fue desarrollado utilizando **\[C# / .NET / Windows Forms /
-SQL Server / otras tecnologías utilizadas\]**, aplicando principios de
-Programación Orientada a Objetos y una arquitectura por capas.
-
-La aplicación permite gestionar \[libros, autores, categorías, usuarios,
-préstamos, devoluciones y demás funcionalidades realmente
-implementadas\].
+La aplicación permite gestionar libros, autores, editoriales, usuarios, préstamos y devoluciones, y genera diez
+reportes de consulta. El código fuente se versionó con Git y se publicó en GitHub junto con el script SQL y esta
+documentación.
 
 
 
@@ -96,25 +105,25 @@ implementadas\].
 
 ## 2.1 Objetivo general
 
-Desarrollar un Sistema de Gestión de Biblioteca que permita \[indicar el
-propósito principal del sistema\], utilizando Programación Orientada a
-Objetos, una base de datos relacional y una arquitectura por capas.
+Desarrollar una aplicación de escritorio para la gestión integral de una biblioteca utilizando C#, Windows Forms y
+SQL Server, que permita administrar libros, autores, editoriales y usuarios, gestionar préstamos y devoluciones, y
+generar reportes mediante operaciones conectadas a una base de datos relacional, aplicando los principios de la
+Programación Orientada a Objetos y una arquitectura por capas.
 
 
 ## 2.2 Objetivos específicos
 
--   Diseñar e implementar una aplicación de escritorio para la gestión
-    de \[indicar alcance\].
--   Aplicar principios de Programación Orientada a Objetos.
--   Diseñar e implementar una base de datos relacional en SQL Server.
--   Implementar operaciones CRUD para las entidades principales.
--   Implementar validaciones de datos.
--   Implementar manejo de excepciones.
--   Aplicar una arquitectura por capas.
--   Implementar consultas que faciliten la administración de la
-    biblioteca.
--   Utilizar Git y GitHub para el control de versiones.
--   Documentar técnica y funcionalmente el proyecto.
+-   Aplicar los principios de la Programación Orientada a Objetos (clases, constructores, encapsulamiento,
+herencia y colecciones).
+- Diseñar e implementar una base de datos relacional en SQL Server con claves primarias, foráneas y
+restricciones de integridad.
+- Implementar operaciones CRUD para libros, autores, editoriales y usuarios.
+- Implementar el registro de préstamos y devoluciones manteniendo la coherencia de las existencias.
+- Validar la información ingresada por el usuario y manejar las excepciones de forma controlada.
+- Implementar una arquitectura por capas que separe la presentación, la lógica de negocio y el acceso a datos.
+- Implementar un módulo de reportes para consultar la información de la biblioteca.
+- Utilizar Git y GitHub como sistema de control de versiones.
+- Documentar técnicamente el proyecto.
 
 
 ------------------------------------------------------------------------
@@ -123,21 +132,20 @@ Objetos, una base de datos relacional y una arquitectura por capas.
 
 ## 3.1 Descripción del problema
 
-Describir la situación que origina la necesidad del sistema.
+Una institución educativa requiere administrar los procesos de su biblioteca. La gestión manual de libros, autores,
+editoriales y usuarios, junto con el control de los préstamos y devoluciones, puede generar errores, información
+duplicada, pérdida de datos y dificultad para saber qué libros están disponibles y quién los tiene.
 
-
-Actualmente, la biblioteca presenta inconvenientes en la gestión y organización de los datos correspondientes a los libros, escritores, usuarios y préstamos. Al realizar estos procesos de forma manual, existe el riesgo de cometer errores, extraviar información y tener dificultades para identificar qué libros se encuentran disponibles.
-
-Ante esta situación, se plantea crear una aplicación que facilite la gestión de la biblioteca, permitiendo almacenar, organizar y consultar toda la información desde un solo sistema, de forma práctica y eficiente.
-
+Por esta razón se propone una aplicación de escritorio que centralice la información bibliográfica, administre a los
+usuarios, gestione los préstamos y devoluciones y permita consultar la información mediante reportes,
+garantizando la integridad y la consistencia de los datos almacenados.
 
 ## 3.2 Justificación
 
-El desarrollo de una aplicación para la gestión de una biblioteca surge de la necesidad de mejorar la organización y el control de la información relacionada con los libros, autores, usuarios y préstamos. Actualmente, realizar estos procesos manualmente puede ocasionar retrasos, inconsistencias en los registros y dificultades para consultar la información.
-
-Por medio de esta aplicación se busca optimizar las actividades administrativas, facilitar el registro y la búsqueda de libros, llevar un seguimiento de los préstamos y controlar la disponibilidad del material bibliográfico. Además, permitirá mantener la información centralizada, reducir los errores humanos y ofrecer un servicio más ágil y organizado a los usuarios de la biblioteca.
-
-De esta manera, el proyecto contribuirá a mejorar el funcionamiento de la biblioteca mediante el uso de herramientas tecnológicas que faciliten la gestión y el acceso a la información.
+Un sistema de información para la biblioteca reduce los errores de registro, evita duplicados, mantiene
+actualizadas las existencias de cada libro y permite conocer en cualquier momento el estado de los préstamos.
+Además, la aplicación permite poner en práctica los conocimientos de Programación Orientada a Objetos, bases de
+datos relacionales y arquitectura por capas vistos en el curso.
 
 ## 3.3 Alcance
 
@@ -193,22 +201,17 @@ El sistema de gestión de la biblioteca no incluirá las siguientes funcionalida
 
 ## 4.1 Descripción general
 
-El Sistema de Gestión de Biblioteca permitirá administrar la información
-relacionada con \[usuarios, libros, editoriales\] y controlar los procesos de
-\[préstamos, devoluciones, consultas, etc.\].
+El Sistema de Gestión de Biblioteca administra la información de libros, autores, editoriales y usuarios y controla
+los procesos de préstamo y devolución, manteniendo la integridad de las relaciones entre libros, usuarios y préstamos.
 
 ## 4.2 Actores del sistema
 
   -----------------------------------------------------------------------
   Actor                               Descripción
   ----------------------------------- -----------------------------------
-  Bibliotecario / Administrador       \[Es el usuario encargado de administrar y controlar el funcionamiento del sistema de la biblioteca.\]
+  **Bibliotecario / Administrador**  Único actor que usa la aplicación. Registra y mantiene libros, autores, editoriales y usuarios, registra préstamos y devoluciones y consulta los reportes.
 
-  Usuario / Es la persona que utiliza los servicios de la biblioteca y consulta el material bibliográfico disponible.
 
-  Administrador de la base de datos / Es el encargado de supervisar y garantizar el correcto funcionamiento de la base de datos del sistema de la biblioteca.
-
-  Desarrollador del sistema / Es la persona encargada de crear, configurar y mantener la aplicación de gestión de la biblioteca, asegurando que sus funcionalidades trabajen correctamente.
 
   -----------------------------------------------------------------------
 
@@ -371,7 +374,7 @@ En general, la interacción entre los actores permite mantener actualizada la in
 
 ## 5.2 Diagrama de casos de uso
 
-![alt text](<Diagrama De Casos De Uso - Biblioteca .png>)
+![alt text](<Diagrama De Casos De Uso - Biblioteca -1.png>)
 
 ## 5.3 Descripción de casos de uso
 
@@ -449,10 +452,21 @@ devolución. 3. Calcular días de retraso. 4. Calcular multa cuando
 corresponda. 5. Actualizar disponibilidad. 6. Actualizar el estado del
 préstamo. 7. Mostrar confirmación.
 
-**Flujos alternativos:** - \[Describir situaciones de error.\]
+**Flujos alternativos:**
+- Si el usuario deja campos obligatorios vacíos, el sistema muestra un mensaje solicitando completar la información.
 
-**Postcondiciones:** - La devolución queda registrada. - El libro vuelve
-a estar disponible según corresponda.
+
+- Si el ISBN ya se encuentra registrado, el sistema informa que el libro ya existe.
+
+
+- Si el año de publicación no tiene un formato válido, el sistema solicita corregirlo.
+
+
+- Si ocurre un problema de conexión con SQL Server, el sistema muestra un mensaje de error y no registra la información.
+
+**Postcondiciones:** 
+- La devolución queda registrada. 
+- El libro vuelvea estar disponible según corresponda.
 
 ------------------------------------------------------------------------
 
@@ -466,7 +480,7 @@ formularios presentan la información.
 
 ## 6.2 Diagrama de clases
 
-![alt text](<Diagrama De Clases - Biblioteca.png>)
+![alt text](<Diagrama De Clases - Biblioteca-1.png>)
 
 `![Diagrama de clases](ruta/al/diagrama-clases.png)`
 
@@ -533,7 +547,7 @@ campos que no se deben repetir tienen restricciones de unicidad.
 
 ## 7.2 Diagrama entidad-relación
 
-![alt text](<Diagramas Entidad Relacion.png>)
+![alt text](<Diagramas Entidad Relacion-1.png>)
 
 `![Modelo entidad-relación](ruta/al/modelo-entidad-relacion.png)`
 
@@ -659,7 +673,7 @@ Describir las relaciones entre las entidades.
   diasRetraso       INT             \-      No     Número de días de retraso.
   multa             DECIMAL(10,2)   \-      Sí     Valor de la multa, si aplica.
 
-
+![alt text](<Diccionario De Datos - Biblioteca .png>)
 
 ------------------------------------------------------------------------
 # 9. ARQUITECTURA DEL SISTEMA
@@ -680,9 +694,8 @@ La arquitectura está compuesta por:
 
 ## 9.2 Diagrama de arquitectura
 
-![alt text](<Arquitectura Del Sistema  - Biblioteca .png>)
 
-`![Arquitectura del sistema](ruta/al/diagrama-arquitectura.png)`
+![alt text](<Arquitectura Del Sistema  - Biblioteca -2.png>)
 
 ## 9.3 Capa de Presentación
 
@@ -795,41 +808,62 @@ llegar nuevamente a la interfaz.
 
 ## 10.1 Módulo de libros
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Formulario con ISBN, título, autor y editorial (listas desplegables), categoría, año y existencias. Permite guardar,
+editar (doble clic sobre la fila), eliminar y buscar por ISBN, título o autor. El ISBN debe tener 10 o 13 caracteres y
+no se puede repetir.
 
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. -
 Eliminar. - Buscar.
 
-**Validaciones:** - \[Validación.\] - \[Validación.\]
+**Validaciones:** 
+- Registrar
+
+![alt text](<Registro libros.png>)
+
+- Consultar
+
+![alt text](<Consulta Libros.png>)
+
+- Eliminar
+
+![alt text](<Libro eliminado.png>)
+
+- Buscar
+
+![alt text](<Buscar libro.png>)
 
 ## 10.2 Módulo de autores
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** CRUD de autores. No permite repetir nombre y apellido ni eliminar un autor con libros registrados.
 
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
 
 ## 10.3 Módulo de categorías
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** CRUD de categorías. Permite registrar, consultar, editar y eliminar categorías utilizadas para clasificar los libros. No permite repetir el nombre de una categoría ni eliminar una categoría que tenga libros asociados.
 
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
 
 ## 10.4 Módulo de usuarios
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** CRUD de usuarios. El documento es obligatorio, solo numérico y único; el teléfono es numérico y el correo, si se
+escribe, debe tener un formato válido.
 
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. - Eliminar.
 
 ## 10.5 Módulo de préstamos
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Permite elegir usuario, libro (con sus ejemplares disponibles) y fecha, y registrar el préstamo. La tabla muestra
+todos los préstamos y se puede filtrar por estado. Al seleccionar un préstamo se puede editar su fecha (si sigue
+activo) o eliminarlo.
 
 **Funcionalidades:** - Registrar préstamo. - Consultar préstamos
 activos. - Consultar historial. - Actualizar disponibilidad.
 
 ## 10.6 Módulo de devoluciones
 
-**Objetivo:** \[Descripción.\]
+**Objetivo:** Está en el mismo formulario de préstamos: se selecciona el préstamo, se elige la fecha de devolución y se pulsa
+Registrar devolución. El sistema cambia el estado a Devuelto y suma un ejemplar al libro.
 
 **Funcionalidades:** - Registrar devolución. - Calcular días de
 retraso. - Calcular multa cuando aplique. - Actualizar disponibilidad.
@@ -845,9 +879,60 @@ retraso. - Calcular multa cuando aplique. - Actualizar disponibilidad.
 -   Usuarios con préstamos activos.
 -   Historial de préstamos.
 -   Libros más prestados.
--   \[Otras consultas implementadas.\]
-
-> **Eliminar las consultas que no estén implementadas y agregar las que
-> sí existan.**
 
 ------------------------------------------------------------------------
+# 11. CAPTURAS DE PANTALLA DEL SISTEMA
+
+En esta sección se deben incluir evidencias de las principales
+funcionalidades.
+
+## 11.1 Menú principal
+
+![alt text](<Menu Inicial.png>)
+
+**Descripción:** Presenta la pantalla principal del sistema ACABiblioteca, desde la cual el usuario puede acceder a los diferentes módulos de la aplicación. Permite navegar entre las opciones de gestión de libros, autores, categorías, usuarios, préstamos, devoluciones y consultas, facilitando el acceso organizado a las funcionalidades del sistema.
+
+## 11.2 Gestión de libros
+
+![Gestión de libros](ruta/captura-libros.png)
+
+**Descripción:** \[Explicar la funcionalidad.\]
+
+## 11.3 Gestión de autores
+
+![Gestión de autores](ruta/captura-autores.png)
+
+**Descripción:** \[Explicar la funcionalidad.\]
+
+## 11.4 Gestión de categorías
+
+![Gestión de categorías](ruta/captura-categorias.png)
+
+**Descripción:** \[Explicar la funcionalidad.\]
+
+## 11.5 Gestión de usuarios
+
+![Gestión de usuarios](ruta/captura-usuarios.png)
+
+**Descripción:** \[Explicar la funcionalidad.\]
+
+## 11.6 Registro de préstamos
+
+![Registro de préstamos](ruta/captura-prestamos.png)
+
+**Descripción:** \[Explicar la funcionalidad.\]
+
+## 11.7 Registro de devoluciones
+
+![Registro de devoluciones](ruta/captura-devoluciones.png)
+
+**Descripción:** \[Explicar la funcionalidad.\]
+
+## 11.8 Consultas
+
+![Consultas](ruta/captura-consultas.png)
+
+**Descripción:** \[Explicar la funcionalidad.\]
+
+> **Recomendación:** cada captura debe tener una breve explicación y
+> mostrar una funcionalidad real del sistema.
