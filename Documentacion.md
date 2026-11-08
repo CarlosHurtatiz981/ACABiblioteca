@@ -894,7 +894,7 @@ funcionalidades.
 
 ## 11.2 Gestión de libros
 
-![Menú Inicial](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Menu%20Inicial.png)
+![Libro guardado](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Libro%20guardado.png)
 
 **Descripción:** Esta pantalla permite administrar la información de los libros registrados en la biblioteca. Ofrece las opciones de registrar nuevos libros, consultar, buscar, modificar y eliminar registros. También permite visualizar información como ISBN, título, categoría, año de publicación, autor, editorial y existencias disponibles.
 
