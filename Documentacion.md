@@ -374,7 +374,7 @@ En general, la interacción entre los actores permite mantener actualizada la in
 
 ## 5.2 Diagrama de casos de uso
 
-![alt text](<Diagrama De Casos De Uso - Biblioteca -1.png>)
+![Diagrama de casos de uso](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Diagrama%20De%20Casos%20De%20Uso%20-%20Biblioteca%20.png)
 
 ## 5.3 Descripción de casos de uso
 
@@ -480,7 +480,7 @@ formularios presentan la información.
 
 ## 6.2 Diagrama de clases
 
-![alt text](<Diagrama De Clases - Biblioteca-1.png>)
+![Diagrama de Clases](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Diagrama%20De%20Clases%20-%20Biblioteca.png)
 
 `![Diagrama de clases](ruta/al/diagrama-clases.png)`
 
@@ -547,7 +547,7 @@ campos que no se deben repetir tienen restricciones de unicidad.
 
 ## 7.2 Diagrama entidad-relación
 
-![alt text](<Diagramas Entidad Relacion-1.png>)
+![Diagrama Entidad Relación](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Diagramas%20Entidad%20Relacion.png)
 
 `![Modelo entidad-relación](ruta/al/modelo-entidad-relacion.png)`
 
@@ -695,7 +695,7 @@ La arquitectura está compuesta por:
 ## 9.2 Diagrama de arquitectura
 
 
-![alt text](<Arquitectura Del Sistema  - Biblioteca -2.png>)
+![Arquitectura del sistema](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Arquitectura%20del%20sistema.png)
 
 ## 9.3 Capa de Presentación
 
