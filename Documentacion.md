@@ -818,19 +818,19 @@ Eliminar. - Buscar.
 **Validaciones:** 
 - Registrar
 
-![alt text](<Registro libros.png>)
+![Registro de libros](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Registro%20libros.png)
 
 - Consultar
 
-![alt text](<Consulta Libros.png>)
+![Consulta Libros](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Consulta%20Libros.png)
 
 - Eliminar
 
-![alt text](<Libro eliminado.png>)
+![Libro eliminado](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Libro%20eliminado.png)
 
 - Buscar
 
-![alt text](<Buscar libro.png>)
+![Buscar libro](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Buscar%20libro.png)
 
 ## 10.2 Módulo de autores
 
@@ -894,40 +894,39 @@ funcionalidades.
 
 ## 11.2 Gestión de libros
 
-![alt text](<Buscar libro-1.png>)
+![Menú Inicial](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Menu%20Inicial.png)
 
 **Descripción:** Esta pantalla permite administrar la información de los libros registrados en la biblioteca. Ofrece las opciones de registrar nuevos libros, consultar, buscar, modificar y eliminar registros. También permite visualizar información como ISBN, título, categoría, año de publicación, autor, editorial y existencias disponibles.
 
 ## 11.3 Gestión de autores
 
-![alt text](<Gestion Autores.png>)
+![Gestión Autores](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Gestion%20Autores.png)
 
 **Descripción:** Permite administrar la información de los autores asociados a los libros de la biblioteca. Desde este módulo se pueden registrar nuevos autores, consultar los existentes, modificar sus datos y eliminar registros cuando no tengan libros asociados. Además, evita la duplicidad de autores mediante la validación del nombre y apellido.
 
 
-**Descripción:** \[Explicar la funcionalidad.\]
 
 ## 11.4 Gestión de usuarios
 
-![alt text](<Gestion usuarios.png>)
+![Gestión Autores](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Gestion%20Autores.png)
 
 **Descripción:** Permite administrar la información de los usuarios registrados en el sistema, quienes pueden solicitar préstamos de libros. Incluye las opciones de registro, consulta, modificación y eliminación de usuarios, validando que el documento de identidad sea obligatorio, numérico y único. También verifica el formato del correo electrónico cuando se proporciona.
 
 ## 11.5 Registro de préstamos
 
-![alt text](<Gestion Prestamos.png>)
+![Gestión Préstamos](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Gestion%20Prestamos.png)
 
 **Descripción:** Esta pantalla permite registrar los préstamos de libros realizados por los usuarios de la biblioteca. Para ello, se selecciona el usuario, el libro y la fecha correspondiente. El sistema verifica la disponibilidad de ejemplares y permite consultar los préstamos registrados, filtrarlos por estado y modificar o eliminar préstamos que continúen activos.
 
 ## 11.6 Registro de devoluciones
 
-![alt text](<Gestion Prestamos-1.png>)
+![Gestión Préstamos](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Gestion%20Prestamos.png)
 
 **Descripción:** Es el mismo modulo de Prestamos Este módulo permite registrar la devolución de los libros que se encuentran en préstamo. El usuario selecciona el préstamo correspondiente, establece la fecha de devolución y confirma la operación. Una vez registrada, el sistema actualiza el estado del préstamo a "Devuelto" y aumenta la cantidad de ejemplares disponibles del libro.
 
 ## 11.7 Consultas
 
-![alt text](<Gestion Consultas.png>)
+![Gestión Consultas](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Gestion%20Consultas.png)
 
 **Descripción:** Esta sección permite consultar información general y específica de la biblioteca mediante diferentes reportes. Incluye listados de libros, autores, editoriales y usuarios, historial de préstamos, préstamos activos y devueltos, libros más prestados, libros sin existencias e información consolidada. Cada consulta presenta el total de registros obtenidos, facilitando el seguimiento y la gestión de la información.
 
@@ -973,8 +972,10 @@ Describir cómo se verificó el funcionamiento del sistema.
   CP08        Consulta        Consultar libros Mostrar libros   El sistema mostró correctamente el listado de libros disponibles para consulta.   Aprobado
                               disponibles      disponibles                      
 
-  CP09        \[Otra prueba\] \[Entrada\]      \[Resultado      \[Resultado\]   \[Estado\]
-                                               esperado\]                       
+  CP09        Buscar libro
+
+Ingresar un ISBN registrado y presionar el botón Buscar.     Mostrar la información del libro correspondiente al ISBN ingresado.El sistema localizó el libro y mostró correctamente su información en los campos correspondientes. Aprobado
+                                                                      
   ------------------------------------------------------------------------------------------
 
 ## 12.3 Evidencias de pruebas
@@ -982,13 +983,13 @@ Describir cómo se verificó el funcionamiento del sistema.
 
 ### Prueba CP01
 
-![alt text](<Registro libros-1.png>)
+![Registro de libros](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Registro%20libros.png)
 
 **Resultado:** Se evidencia el registro exitoso de un nuevo libro en el sistema. La información ingresada fue almacenada correctamente en la base de datos y se encuentra disponible en el listado general de libros.
 
 ### Prueba CP02
 
-![alt text](<Libro repetido.png>)
+![Libro repetido](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Libro%20repetido.png)
 
 **Resultado:** Se evidencia que el sistema identifica un ISBN que ya se encuentra registrado en la base de datos. Al intentar ingresar nuevamente el mismo código, muestra un mensaje de validación e impide la duplicación del registro.
 
@@ -1027,7 +1028,7 @@ Microsoft. (s. f.). Microsoft.Data.SqlClient para SQL Server. Microsoft Learn. h
 
 ## Anexo A. Repositorio GitHub
 
-**Repositorio:** \[Enlace al repositorio\]
+**Repositorio:** (https://github.com/andrestejadac/ACA-PROGRAMACION-AVANZADA)
 
 ## Anexo B. Script de base de datos
 
@@ -1040,17 +1041,17 @@ Microsoft. (s. f.). Microsoft.Data.SqlClient para SQL Server. Microsoft Learn. h
 
 Git Hub local
 
-![alt text](<Repositorio local Git Hub.png>)
+![Repositorio local GitHub](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Repositorio%20local%20Git%20Hub.png)
 
 Git Hub WEB
 
-![alt text](<Repositorio WEB Git Hub.png>)
+![Repositorio WEB GitHub](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Repositorio%20WEB%20Git%20Hub.png)
 
 -   Commits realizados.**887**
 
-![alt text](<Commits realizados.png>)
+![Commits realizados](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Commits%20realizados.png)
 
-![alt text](<Commit Git Hub.png>)
+![Commit GitHub](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Commit%20Git%20Hub.png)
 
 # LISTA DE VERIFICACIÓN ANTES DE ENTREGAR
 
