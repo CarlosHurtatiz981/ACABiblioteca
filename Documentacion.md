@@ -993,6 +993,19 @@ Ingresar un ISBN registrado y presionar el botón Buscar.     Mostrar la informa
 
 **Resultado:** Se evidencia que el sistema identifica un ISBN que ya se encuentra registrado en la base de datos. Al intentar ingresar nuevamente el mismo código, muestra un mensaje de validación e impide la duplicación del registro.
 
+### Prueba CP03
+
+![Usuario registrado correctamente](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Usuario%20registrado%20correctamente.png)
+
+**Resultado:** Se evidencia el registro exitoso de un nuevo usuario en el sistema. Los datos ingresados fueron almacenados correctamente en la base de datos y el usuario quedó registrado para su posterior consulta.
+
+### Prueba CP04
+
+![Gestión de préstamo](https://raw.githubusercontent.com/andrestejadac/ACA-PROGRAMACION-AVANZADA/main/Documentacion/diagramas/Gestion%20prestamo%2013.png)
+
+**Resultado:** Se evidencia el registro exitoso de un préstamo en el sistema. La información quedó almacenada correctamente en la base de datos y la cantidad de ejemplares disponibles del libro se actualizó, disminuyendo según el préstamo realizado.
+
+
 ------------------------------------------------------------------------
 
 # 13. CONCLUSIONES
